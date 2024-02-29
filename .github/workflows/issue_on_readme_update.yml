@@ -1,0 +1,24 @@
+name: Open Issue on README.md Update
+
+on:
+  push:
+    branches:
+      - dev
+    paths:
+      - 'README.md'
+
+jobs:
+  createIssue:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Create Issue
+      uses: imjohnbo/issue-bot@v3
+      with:
+        title: "Further update to README.md is required"
+        body: "Please check the recent changes to README.md and update further if required."
+        labels: "documentation, good first issue"
+        assignees: ""  # You can assign the issue to someone specific by GitHub username
+        project: ""  # If you have a project board, you can specify it here
+        column: ""  # The project board column name to add this issue to
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
