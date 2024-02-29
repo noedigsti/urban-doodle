@@ -21,4 +21,4 @@ jobs:
         project: ""  # If you have a project board, you can specify it here
         column: ""  # The project board column name to add this issue to
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
